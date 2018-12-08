@@ -7,7 +7,7 @@ interpreter in order to perform operations on
 regular integer arithmetic, groups Zn, fields Zp and Galois
 fields GF(p^n). Expression parser is based on an extension
 of the calculator example provided
-in [https://github.com/zaach/jison](Jison) (a Node.js module
+in [jison](https://github.com/zaach/jison "Jison") (a Node.js module
 supporting Yacc-Lex/Bison-Flex style parser generation).
 
 ## Installation
