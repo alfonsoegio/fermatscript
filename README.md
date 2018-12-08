@@ -2,7 +2,7 @@
 
 ## Introduction
 
-FermatScript is a JavaScript app that  provides a readline based
+FermatScript is a JavaScript application that  provides a readline based
 interpreter in order to perform operations on
 regular integer arithmetic, groups Zn, fields Zp and Galois
 fields GF(p^n). Expression parser is based on an extension
@@ -15,6 +15,8 @@ supporting Yacc-Lex/Bison-Flex style parser generation).
 Using nodeenv: [https://github.com/ekalinin/nodeenv](https://github.com/ekalinin/nodeenv)
 
 ```
+$ git clone https://github.com/alfonsoegio/fermatscript.git
+$ cd fermatscript
 $ nodeenv --node 10.14.1 venv
 $ source venv/bin/activate
 (venv) $ npm install
