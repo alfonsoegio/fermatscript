@@ -28,7 +28,7 @@ function completer(line) {
 }
 
 let context = {
-    // Initial FermatScript context (integer arithmetics)
+    // Initial FermatScript context (integer arithmetic)
     "n": 0,
     "add": (x, y) => x + y,
     "subtract": (x, y) => x - y,
@@ -53,7 +53,7 @@ let context = {
 	    "searchGenerators": () => alg.searchGenerators(parser.yy.context)
 	};
 	R.setPrompt(`> `);
-	return `Integer arithmetics`;
+	return `Integer arithmetic`;
     },
     // Cryptographer's favorite field
     "switchToZp": (p) => {

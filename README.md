@@ -2,11 +2,11 @@
 
 ## Introduction
 
-Fermatscript is a JavaScript app that  provides a readline based
+FermatScript is a JavaScript app that  provides a readline based
 interpreter in order to perform operations on
-regiular integer arithmetics, groups Zn, fields Zp and Galois
-fields GF(p^n). Expresion parser is based on an extension
-of thecalculator example provided
+regular integer arithmetic, groups Zn, fields Zp and Galois
+fields GF(p^n). Expression parser is based on an extension
+of the calculator example provided
 in [https://github.com/zaach/jison](Jison) (a Node.js module
 supporting Yacc-Lex/Bison-Flex style parser generation).
 
@@ -64,7 +64,7 @@ Zn(8) > searchGenerators
 7:	1	7
 Generators found: {}
 Zn(8) > reset
-Integer arithmetics
+Integer arithmetic
 > searchGenerators
 Generator search not supported in Integer set
 >
@@ -73,7 +73,7 @@ Generator search not supported in Integer set
 ## TODO
 
 This little application was inspired by [https://github.com/sbisbee/node-galois](node-galois)
-that does not compile with recent Node.js V8 engine; maybe a good starting point
-in order to implement real Galois arithmetics can be wraping
+that does not compile with recent Node.js V8 engine; maybe a first step
+in order to implement real Galois arithmetic would be wrapping
 [http://web.eecs.utk.edu/~plank/plank/papers/CS-07-593/](James S. Plank Fast Galois Field Arithmetic
-Library in C/C++) into V8's engine from Node.js v10.14.1.
+Library in C/C++) into V8's engine in Node.js v10.14.1.
