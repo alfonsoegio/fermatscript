@@ -12,7 +12,7 @@ supporting Yacc-Lex/Bison-Flex style parser generation).
 
 ## Installation
 
-Using nodeenv: [https://github.com/ekalinin/nodeenv](https://github.com/ekalinin/nodeenv)
+Using nodeenv: [nodeenv](https://github.com/ekalinin/nodeenv "nodeenv")
 
 ```
 $ git clone https://github.com/alfonsoegio/fermatscript.git
@@ -68,8 +68,8 @@ Generator search not supported in Integer set
 
 ## TODO
 
-This little application was inspired by [https://github.com/sbisbee/node-galois](node-galois)
+This little application was inspired by [node-galois](https://github.com/sbisbee/node-galois "node-galois")
 that does not compile with recent Node.js V8 engine; maybe a first step
 to achieve real Galois arithmetic could consist on wrapping
-[http://web.eecs.utk.edu/~plank/plank/papers/CS-07-593/](James S. Plank Fast Galois Field Arithmetic Library in C/C++)
+[plank](http://web.eecs.utk.edu/~plank/plank/papers/CS-07-593/ "James S. Plank Fast Galois Field Arithmetic Library in C/C++")
 into V8's engine in Node.js v10.14.1.
