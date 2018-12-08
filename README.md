@@ -71,5 +71,5 @@ Generator search not supported in Integer set
 This little application was inspired by [https://github.com/sbisbee/node-galois](node-galois)
 that does not compile with recent Node.js V8 engine; maybe a first step
 to achieve real Galois arithmetic could consist on wrapping
-[http://web.eecs.utk.edu/~plank/plank/papers/CS-07-593/](James S. Plank Fast Galois Field Arithmetic
-Library in C/C++) into V8's engine in Node.js v10.14.1.
+[http://web.eecs.utk.edu/~plank/plank/papers/CS-07-593/](James S. Plank Fast Galois Field Arithmetic Library in C/C++)
+into V8's engine in Node.js v10.14.1.
