@@ -1,0 +1,33 @@
+{
+  "name": "fermatscript",
+  "version": "1.0.0",
+  "description": "JavaScript readline based application to play with integers, finite fields and groups",
+  "main": "main.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alfonsoegio/fermatscript.git"
+  },
+  "keywords": [
+    "JavaScript",
+    "Galois",
+    "Fermat",
+    "Euler",
+    "Finite",
+    "fields"
+  ],
+  "author": "Egio, Alfonso",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/alfonsoegio/fermatscript/issues"
+  },
+  "homepage": "https://github.com/alfonsoegio/fermatscript#readme",
+  "dependencies": {
+    "jison": "^0.4.18"
+  }
+}
