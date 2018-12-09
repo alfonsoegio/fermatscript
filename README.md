@@ -119,7 +119,11 @@ Zn(10) > divisionTable
 8	8	NaN	6	NaN	NaN	NaN	4	NaN	2
 9	9	NaN	3	NaN	NaN	NaN	7	NaN	1
 
-Zn(10) >
+Zn(10) > Zp(199)
+Switched to Z modulus 199
+Zp(199) > 195^198
+1
+Zp(199) >
 ```
 
 ## TODO
