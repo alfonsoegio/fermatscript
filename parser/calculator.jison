@@ -22,6 +22,8 @@
 "Gf"		      return 'Gf'
 "reset"		      return 'reset'
 "searchGenerators"    return 'searchGenerators'
+"multiplicationTable" return 'multiplicationTable'
+"divisionTable"       return 'divisionTable'
 <<EOF>>               return 'EOF'
 .                     return 'INVALID'
 
@@ -66,7 +68,7 @@ e
     | '(' e ')'
 	{$$ = $2;}
     | NUMBER
-	{$$ = yy.context.modulus(Number(yytext));}
+	{$$ = Number(yytext);}
     | E
 	{$$ = Math.E;}
     | PI
@@ -79,4 +81,8 @@ e
 	{$$ = yy.context.reset();}
     | searchGenerators
 	{$$ = yy.context.searchGenerators();}
+    | multiplicationTable
+	{$$ = yy.context.multiplicationTable();}
+    | divisionTable
+	{$$ = yy.context.divisionTable();}
     ;

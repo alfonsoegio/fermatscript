@@ -18,7 +18,10 @@ R.setPrompt('> ');
 R.prompt();
 
 function completer(line) {
-  let completions = 'Zp Gf exit quit searchGenerators'.split(' ')
+    let completions = `Zp Gf exit
+    quit searchGenerators
+    multiplicationTable
+    divisionTable`.split(' ')
   let hits = completions.filter(function(c) {
     if (c.indexOf(line) == 0) {
       return c;
@@ -37,6 +40,8 @@ let context = {
     "exp": (x, y) => Math.pow(x, y),
     "modulus": (x) => x,
     "searchGenerators": () => alg.searchGenerators(parser.yy.context),
+    "multiplicationTable": () => alg.multiplicationTable(parser.yy.context),
+    "divisionTable": () => alg.divisionTable(parser.yy.context),
     "reset": () => {
 	// Restore initial context
 	parser.yy.context = {
@@ -49,8 +54,10 @@ let context = {
 	    "modulus": (x) => x,
 	    "switchToZp": parser.yy.context.switchToZp,
 	    "switchToGf": parser.yy.context.switchToGf,
-	    "reset": parser.yy.context.reset,
-	    "searchGenerators": () => alg.searchGenerators(parser.yy.context)
+	    "searchGenerators": () => alg.searchGenerators(parser.yy.context),
+	    "multiplicationTable": () => alg.multiplicationTable(parser.yy.context),
+	    "divisionTable": () => alg.divisionTable(parser.yy.context),
+	    "reset": parser.yy.context.reset
 	};
 	R.setPrompt(`> `);
 	return `Integer arithmetic`;
@@ -69,12 +76,14 @@ let context = {
 	    "subtract": (x, y) => ((x % p) - (y % p)) % p,
 	    "multiply": (x, y) => ((x % p) * (y % p)) % p,
 	    "divide": (x, y) => ((x % p) * (alg.modInverse(y,p) % p)) % p,
-	    "exp": (x, y) => (Math.pow((x % p),  (y % p))) % p,
+	    "exp": (x, y) => Math.pow(x,  y) % p,
 	    "modulus": (x) => x % p,
 	    "switchToZp": parser.yy.context.switchToZp,
 	    "switchToGf": parser.yy.context.switchToGf,
-	    "reset": parser.yy.context.reset,
-	    "searchGenerators": () => alg.searchGenerators(parser.yy.context)
+	    "searchGenerators": () => alg.searchGenerators(parser.yy.context),
+	    "multiplicationTable": () => alg.multiplicationTable(parser.yy.context),
+	    "divisionTable": () => alg.divisionTable(parser.yy.context),
+	    "reset": parser.yy.context.reset
 	};
 	return `Switched to Z modulus ${p}`;
     },
@@ -88,12 +97,14 @@ let context = {
 	    "subtract": (x, y) => ((x % N) - (y % N)) % N,
 	    "multiply": (x, y) => ((x % N) * (y % N)) % N,
 	    "divide": (x, y) => ((x % N) * (alg.modInverse(y,N) % N)) % N,
-	    "exp": (x, y) => (Math.pow((x % N),  (y % N))) % N,
+	    "exp": (x, y) => (Math.pow((x % N),  y)) % N,
 	    "modulus": (x) => x % N,
 	    "switchToZp": parser.yy.context.switchToZp,
 	    "switchToGf": parser.yy.context.switchToGf,
-	    "reset": parser.yy.context.reset,
-	    "searchGenerators": () => alg.searchGenerators(parser.yy.context)
+	    "searchGenerators": () => alg.searchGenerators(parser.yy.context),
+	    "multiplicationTable": () => alg.multiplicationTable(parser.yy.context),
+	    "divisionTable": () => alg.divisionTable(parser.yy.context),
+	    "reset": parser.yy.context.reset
 	};
 	if ( alg.isPrime(p) == false ) {
 	    console.log(`Warning, ${p} is not a prime number!!!`);
